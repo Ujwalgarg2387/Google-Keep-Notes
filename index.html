@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Keep Notes</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="header">
+        <div class="header-container">
+            <div class="notes-icon">📝</div>
+            <h1>Keep Notes</h1>
+        </div>
+        <div id="trash-icon" class="trash-icon" onclick="toggleSidebar()">🗑️</div>
+    </div>
+
+    <div class="center-box-container">
+        <div class="card-center-box" style="max-width: 400px;">
+            <div class="card-body">
+                <input type="text" id="noteTitle" class="form-control" placeholder="Title">
+                <hr>
+                <textarea id="noteMessage" class="form-control" placeholder="Write a note..."></textarea>
+            
+                <div class="icon">
+                    <div class="plus-sign" onclick="addNote()">&#43;</div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div id="sidebar" class="sidebar">
+        <div class="sidebar-header">
+            <p style="text-align: center; font-weight: bold; font-size: 25px; margin-left: 40%;">Trash</p>
+            <div class="sidebar-close-btn" onclick="toggleSidebar()">☰</div>
+        </div>
+        <div id="delete-all-btn" style="margin-left: 10px; cursor: pointer;" onclick="deleteAllNotes()">Delete All</div>
+        <div id="trash-container" class="trash-container"></div>
+    </div>
+
+    <div class="notes-container" id="notes-container">
+
+    <script src="script.js"></script>
+
+</body>
+</html>
